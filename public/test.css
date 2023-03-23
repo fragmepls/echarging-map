@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.ontop {
+  position: absolute;
+  z-index: 999;
+}
+
+.side-bar {
+  background: rgb(0, 0, 0, 0.75);
+  backdrop-filter: blur(15px);
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow-y: auto;
+  transition: 0.6s ease;
+  transition-property: left;
+}
+
+.side-bar.active {
+  left: 0;
+  color: black;
+}
+
+.side-bar .menu {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.side-bar .menu .item {
+  position: relative;
+  cursor: pointer;
+}
+
+.side-bar .menu .item a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 60px;
+}
+
+.side-bar .menu .item a:hover {
+  background: #8621f8;
+  transition: 0.3s ease;
+}
+
+.side-bar .menu .item i {
+  margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu {
+  background: rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+.side-bar .menu .item .sub-menu a {
+  padding-left: 80px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.close-btn {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  right: 0;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.menu-btn {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.main h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 60px;
+  text-align: center;
+  line-height: 80px;
+}
+
+@media (max-width: 900px) {
+  .main h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+
+.clear-formatting {
+  content: url(clear.png);
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-control-zoom-in {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  color: white !important;
+}
+
+.leaflet-control-zoom-out {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  color: white !important;
+}
+
+.leaflet-control-zoom-in:hover {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  color: black !important;
+}
+
+.leaflet-control-zoom-out:hover {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  color: black !important;
+}
+
+.leaflet-routing-container {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.leaflet-routing-container .leaflet-routing-geocoders button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.leaflet-routing-container .leaflet-routing-geocoders button:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-color: black;
+}
+
+.leaflet-routing-geocoders input::placeholder {
+  color: rgb(59, 59, 59);
+  opacity: 0.75;
+}
+
+.leaflet-routing-geocoders input {
+  color: black;
+  opacity: 0.75;
+  padding-right: 20px;
+}
+
+.leaflet-routing-geocoders input:focus {
+  color: black;
+  opacity: 1;
+  padding-right: 20px;
+}
+
+.leaflet-routing-remove-waypoint::after {
+  color: rgba(0, 0, 0, 0.75) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.leaflet-routing-alt {
+  color: white !important;
+}
+
+.leaflet-routing-alt:hover tr:hover {
+  color: black !important;
+}
+
+.leaflet-routing-container-hide .leaflet-routing-collapse-btn {
+  position: absolute !important;
+  left: 2px !important;
+  top: 2px !important;
+  display: block;
+  width: 26px;
+  height: 23px;
+  background-image: url(image.png) !important;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
